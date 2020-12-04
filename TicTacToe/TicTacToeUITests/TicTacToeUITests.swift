@@ -66,7 +66,7 @@ class TicTacToeUITests: XCTestCase {
         app.images["A2"].tap()
         XCTAssertTrue(app.staticTexts["Player 2"].exists)
         
-        app.buttons["restart"].tap()
+        app.buttons["Restart"].tap()
         XCTAssertTrue(app.staticTexts["Player 1"].exists)
     }
     
