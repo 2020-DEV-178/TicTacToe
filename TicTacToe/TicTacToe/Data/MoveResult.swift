@@ -4,5 +4,5 @@ enum MoveResult {
     case Authorized(player: Player)
     case Forbiden
     case Win(player: Player)
-    case Draw
+    case Draw(lastPlayer: Player)
 }

@@ -11,10 +11,8 @@ class TicTacToeView: UIView {
         switch result {
         case .Authorized(let player):
             imageView.image = player.image
-        case .Win(let player):
+        case .Win(let player), .Draw(let player):
             imageView.image = player.image
-            isUserInteractionEnabled = false
-        case .Draw:
             isUserInteractionEnabled = false
         case .Forbiden: break
         }

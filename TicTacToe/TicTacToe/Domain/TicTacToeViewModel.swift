@@ -40,7 +40,7 @@ class TicTacToeViewModel {
         if winnerValidator.verifyIfPlayerHasWon(from: location, in: board) {
             return .Win(player: player)
         } else if moveCounter == MagicNumbers.maxMoveNumber {
-            return .Draw
+            return .Draw(lastPlayer: player)
         }
         moveToNexPlayer()
         return .Authorized(player: player)
