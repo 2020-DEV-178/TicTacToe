@@ -23,6 +23,7 @@
 		DD818713257A664D008EC019 /* MoveResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD818712257A664D008EC019 /* MoveResult.swift */; };
 		DD81871B257A714E008EC019 /* TicTacToeWinnerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81871A257A714E008EC019 /* TicTacToeWinnerValidator.swift */; };
 		DD818720257A7DC9008EC019 /* TicTacToeWinnerValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81871F257A7DC9008EC019 /* TicTacToeWinnerValidatorTest.swift */; };
+		DD81872E257A8CCB008EC019 /* TicTacToeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81872D257A8CCB008EC019 /* TicTacToeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DD818712257A664D008EC019 /* MoveResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveResult.swift; sourceTree = "<group>"; };
 		DD81871A257A714E008EC019 /* TicTacToeWinnerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeWinnerValidator.swift; sourceTree = "<group>"; };
 		DD81871F257A7DC9008EC019 /* TicTacToeWinnerValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeWinnerValidatorTest.swift; sourceTree = "<group>"; };
+		DD81872D257A8CCB008EC019 /* TicTacToeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		DD2D8573257A5D0700C61F24 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DD81872C257A8CB5008EC019 /* Views */,
 				DD2D853E257A5CDD00C61F24 /* ViewController.swift */,
 				DD2D8574257A5D1800C61F24 /* UI */,
 			);
@@ -192,6 +195,14 @@
 				DD2D858D257A619300C61F24 /* Localizable.strings */,
 			);
 			path = Res;
+			sourceTree = "<group>";
+		};
+		DD81872C257A8CB5008EC019 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD81872D257A8CCB008EC019 /* TicTacToeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +345,7 @@
 				DD8186FF257A6378008EC019 /* Column.swift in Sources */,
 				DD81870E257A6521008EC019 /* TicTacToeViewModel.swift in Sources */,
 				DD2D8582257A60B200C61F24 /* Player.swift in Sources */,
+				DD81872E257A8CCB008EC019 /* TicTacToeView.swift in Sources */,
 				DD818704257A6494008EC019 /* Row.swift in Sources */,
 				DD2D853B257A5CDD00C61F24 /* AppDelegate.swift in Sources */,
 			);
