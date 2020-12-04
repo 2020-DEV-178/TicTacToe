@@ -8,7 +8,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
     
     func testEmptyBoard() {
         let board = [Location: Player]()
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Has no player played, it should be false")
     }
     
@@ -16,7 +16,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .One): player1,
                      Location(column: .A, row: .Two): player1,
                      Location(column: .A, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Player should win has column A is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Two)), "Player should win has column A is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Three)), "Player should win has column A is full with his moves")
@@ -26,7 +26,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .B, row: .One): player1,
                      Location(column: .B, row: .Two): player1,
                      Location(column: .B, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .One)), "Player should win has column B is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Two)), "Player should win has column B is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Three)), "Player should win has column B is full with his moves")
@@ -36,7 +36,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .C, row: .One): player1,
                      Location(column: .C, row: .Two): player1,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .One)), "Player should win has column C is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Two)), "Player should win has column C is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Three)), "Player should win has column C is full with his moves")
@@ -46,7 +46,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .One): player1,
                      Location(column: .B, row: .One): player1,
                      Location(column: .C, row: .One): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .One)), "Player should win has row 1 is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Player should win has row 1 is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .One)), "Player should win has row 1 is full with his moves")
@@ -56,7 +56,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .Two): player1,
                      Location(column: .B, row: .Two): player1,
                      Location(column: .C, row: .Two): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Two)), "Player should win has row 2 is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Two)), "Player should win has row 2 is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Two)), "Player should win has row 2 is full with his moves")
@@ -66,7 +66,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .Three): player1,
                      Location(column: .B, row: .Three): player1,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Three)), "Player should win has row 3 is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Three)), "Player should win has row 3 is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Three)), "Player should win has row 3 is full with his moves")
@@ -76,7 +76,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .One): player1,
                      Location(column: .B, row: .Two): player1,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Player should win has Top to bottom diagonal is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Two)), "Player should win has Top to bottom diagonal is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Three)), "Player should win has Top to bottom diagonal is full with his moves")
@@ -86,7 +86,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .Three): player1,
                      Location(column: .B, row: .Two): player1,
                      Location(column: .C, row: .One): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Three)), "Player should win has bottom to top diagonal is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Two)), "Player should win has bottom to top diagonal is full with his moves")
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .One)), "Player should win has bottom to top diagonal is full with his moves")
@@ -96,7 +96,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .C, row: .One): player1,
                      Location(column: .C, row: .Two): player2,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .One)), "Player should not win has column C is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Two)), "Player should not win has column C is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Three)), "Player should not win has column C is not full with his moves")
@@ -106,7 +106,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .One): player1,
                      Location(column: .A, row: .Two): player1,
                      Location(column: .A, row: .Three): player2]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Player should not win has column A is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Two)), "Player should not win has column A is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Three)), "Player should not win has column A is not full with his moves")
@@ -116,7 +116,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .B, row: .One): player2,
                      Location(column: .B, row: .Two): player1,
                      Location(column: .B, row: .Three): player2]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .One)), "Player should not win has column B is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Two)), "Player should not win has column B is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Three)), "Player should not win has column B is not full with his moves")
@@ -126,7 +126,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .One): player1,
                      Location(column: .B, row: .Two): player2,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Player should not win has row 1 is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .One)), "Player should not win has row 1 is not full with his movess")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .One)), "Player should not win has row 1 is not full with his moves")
@@ -136,7 +136,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .Two): player1,
                      Location(column: .B, row: .Two): player2,
                      Location(column: .C, row: .Two): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Two)), "Player should not win has row 2 is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Two)), "Player should not win has row 2 is not full with his movess")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Two)), "Player should not win has row 2 is not full with his moves")
@@ -146,7 +146,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .Three): player1,
                      Location(column: .B, row: .Three): player2,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Three)), "Player should not win has row 3 is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Three)), "Player should not win has row 3 is not full with his movess")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Three)), "Player should not win has row 3 is not full with his moves")
@@ -156,7 +156,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .One): player1,
                      Location(column: .B, row: .Two): player2,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Player should not win has Top to bottom diagonal is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Two)), "Player should not win has Top to bottom diagonal is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .Three)), "Player should not win has Top to bottom diagonal is not full with his moves")
@@ -166,7 +166,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
         let board = [Location(column: .A, row: .Three): player1,
                      Location(column: .B, row: .Two): player1,
                      Location(column: .C, row: .One): player2]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .Three)), "Player should not win has bottom to top diagonal is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .B, row: .Two)), "Player should not win has bottom to top diagonal is not full with his moves")
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .C, row: .One)), "Player should not win has bottom to top diagonal is not full with his moves")
@@ -182,7 +182,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
                      Location(column: .C, row: .One): player2,
                      Location(column: .C, row: .Two): player2,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         
     
         XCTAssertTrue(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Player should win")
@@ -208,7 +208,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
                      Location(column: .C, row: .One): player2,
                      Location(column: .C, row: .Two): player2,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         
     
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Player should not win")
@@ -234,7 +234,7 @@ class TicTacToeWinnerValidatorTest: XCTestCase {
                      Location(column: .C, row: .One): player2,
                      Location(column: .C, row: .Two): player2,
                      Location(column: .C, row: .Three): player1]
-        let validator = TicTacToeWinnerValidator(game: board)
+        let validator = TicTacToeWinnerValidator(board: board)
         
     
         XCTAssertFalse(validator.verifyIfPlayerHasWon(from: .init(column: .A, row: .One)), "Player should not win")
