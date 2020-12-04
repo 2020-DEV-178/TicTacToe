@@ -1,6 +1,6 @@
 import Foundation
 
-typealias Game = [Location: Player?]
+typealias Board = [Location: Player?]
 
 class TicTacToeViewModel {
     
@@ -15,23 +15,23 @@ class TicTacToeViewModel {
     
     private var moveCounter: Int = 0
     
-    private var game = Game()
+    private var board = Board()
+    private lazy var winnerValidator = TicTacToeWinnerValidator(board)
     
     init(player1: Player, player2: Player) {
         self.player1 = player1
         self.player2 = player2
-        
         self.currentPlayer = player1
     }
     
     public func moveMade(at location: Location) -> MoveResult {
         let player = currentPlayer
-        guard game[location] == nil else {
+        guard board[location] == nil else {
             return .Forbiden
         }
-        game[location] = currentPlayer
+        board[location] = currentPlayer
         moveCounter += 1
-        if isAWin(from: location) {
+        if winnerValidator.verifyIfPlayerHasWon(from: location) {
             return .Win(player: player)
         } else if moveCounter == MagicNumbers.maxMoveNumber {
             return .Draw
@@ -46,9 +46,4 @@ class TicTacToeViewModel {
         } else {
             currentPlayer = player1
         }
-    }
-    
-    func isAWin(from location: Location) -> Bool {
-        return false
-    }
-}
+    }}
