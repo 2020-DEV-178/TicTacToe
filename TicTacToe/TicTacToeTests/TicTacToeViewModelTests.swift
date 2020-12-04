@@ -118,4 +118,17 @@ class TicTacToeViewModelTests: XCTestCase {
         XCTAssert(player == player1)
     }
     
+    func testPlayerOrder() throws {
+        let viewModel = TicTacToeViewModel(player1: player1, player2: player2)
+        XCTAssertTrue(viewModel.currentPlayer == player1)
+        _ = viewModel.moveMade(at: Location(column: .A, row: .One))
+        XCTAssertTrue(viewModel.currentPlayer == player2)
+        _ = viewModel.moveMade(at: Location(column: .B, row: .Two))
+        XCTAssertTrue(viewModel.currentPlayer == player1)
+        _ = viewModel.moveMade(at: Location(column: .B, row: .One))
+        XCTAssertTrue(viewModel.currentPlayer == player2)
+        _ = viewModel.moveMade(at: Location(column: .A, row: .Three))
+        XCTAssertTrue(viewModel.currentPlayer == player1)
+    }
+    
 }
