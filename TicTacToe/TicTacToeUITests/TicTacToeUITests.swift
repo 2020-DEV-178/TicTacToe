@@ -1,10 +1,3 @@
-//
-//  TicTacToeUITests.swift
-//  TicTacToeUITests
-//
-//  Created by Jonas Freres on 04/12/2020.
-//
-
 import XCTest
 
 class TicTacToeUITests: XCTestCase {

@@ -14,6 +14,13 @@
 		DD2D8547257A5CDE00C61F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2D8545257A5CDE00C61F24 /* LaunchScreen.storyboard */; };
 		DD2D855D257A5CDE00C61F24 /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D855C257A5CDE00C61F24 /* TicTacToeUITests.swift */; };
 		DD2D857A257A5E3600C61F24 /* TicTacToeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D8579257A5E3600C61F24 /* TicTacToeViewModelTests.swift */; };
+		DD2D8582257A60B200C61F24 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D8581257A60B200C61F24 /* Player.swift */; };
+		DD2D858B257A619300C61F24 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD2D858D257A619300C61F24 /* Localizable.strings */; };
+		DD8186FF257A6378008EC019 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8186FE257A6378008EC019 /* Column.swift */; };
+		DD818704257A6494008EC019 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD818703257A6494008EC019 /* Row.swift */; };
+		DD818709257A64D2008EC019 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD818708257A64D2008EC019 /* Location.swift */; };
+		DD81870E257A6521008EC019 /* TicTacToeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81870D257A6521008EC019 /* TicTacToeViewModel.swift */; };
+		DD818713257A664D008EC019 /* MoveResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD818712257A664D008EC019 /* MoveResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,15 @@
 		DD2D855C257A5CDE00C61F24 /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		DD2D855E257A5CDE00C61F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2D8579257A5E3600C61F24 /* TicTacToeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewModelTests.swift; sourceTree = "<group>"; };
+		DD2D8581257A60B200C61F24 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		DD2D858C257A619300C61F24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD2D8591257A619F00C61F24 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD2D8595257A61AD00C61F24 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD8186FE257A6378008EC019 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		DD818703257A6494008EC019 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		DD818708257A64D2008EC019 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DD81870D257A6521008EC019 /* TicTacToeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewModel.swift; sourceTree = "<group>"; };
+		DD818712257A664D008EC019 /* MoveResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DD2D853A257A5CDD00C61F24 /* AppDelegate.swift */,
+				DD81870D257A6521008EC019 /* TicTacToeViewModel.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -135,6 +152,11 @@
 		DD2D8571257A5CFC00C61F24 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DD2D8581257A60B200C61F24 /* Player.swift */,
+				DD8186FE257A6378008EC019 /* Column.swift */,
+				DD818703257A6494008EC019 /* Row.swift */,
+				DD818708257A64D2008EC019 /* Location.swift */,
+				DD818712257A664D008EC019 /* MoveResult.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -161,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				DD2D8543257A5CDE00C61F24 /* Assets.xcassets */,
+				DD2D858D257A619300C61F24 /* Localizable.strings */,
 			);
 			path = Res;
 			sourceTree = "<group>";
@@ -250,6 +273,8 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				nl,
 			);
 			mainGroup = DD2D852E257A5CDD00C61F24;
 			productRefGroup = DD2D8538257A5CDD00C61F24 /* Products */;
@@ -269,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD2D8547257A5CDE00C61F24 /* LaunchScreen.storyboard in Resources */,
+				DD2D858B257A619300C61F24 /* Localizable.strings in Resources */,
 				DD2D8544257A5CDE00C61F24 /* Assets.xcassets in Resources */,
 				DD2D8542257A5CDD00C61F24 /* Main.storyboard in Resources */,
 			);
@@ -296,6 +322,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD2D853F257A5CDD00C61F24 /* ViewController.swift in Sources */,
+				DD818713257A664D008EC019 /* MoveResult.swift in Sources */,
+				DD818709257A64D2008EC019 /* Location.swift in Sources */,
+				DD8186FF257A6378008EC019 /* Column.swift in Sources */,
+				DD81870E257A6521008EC019 /* TicTacToeViewModel.swift in Sources */,
+				DD2D8582257A60B200C61F24 /* Player.swift in Sources */,
+				DD818704257A6494008EC019 /* Row.swift in Sources */,
 				DD2D853B257A5CDD00C61F24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +380,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		DD2D858D257A619300C61F24 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD2D858C257A619300C61F24 /* en */,
+				DD2D8591257A619F00C61F24 /* fr */,
+				DD2D8595257A61AD00C61F24 /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -355,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -416,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  TicTacToe
-//
-//  Created by Jonas Freres on 04/12/2020.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
