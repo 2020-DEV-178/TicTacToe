@@ -33,30 +33,41 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="unq-xp-lmJ" userLabel="A1">
                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="A1" label="A1">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </imageView>
                                     <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksx-n0-5XU" userLabel="B1">
                                         <rect key="frame" x="84.666666666666657" y="0.0" width="84.666666666666657" height="84.666666666666671"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="B1" label="B1"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0C-ed-xIJ" userLabel="C1">
                                         <rect key="frame" x="169.33333333333331" y="0.0" width="84.666666666666686" height="84.666666666666671"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="C1" label="C1"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="snd-xR-2v3" userLabel="A2">
                                         <rect key="frame" x="0.0" y="84.666666666666686" width="84.666666666666671" height="84.666666666666686"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="A2" label="A2"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D1N-my-sMv" userLabel="A3">
                                         <rect key="frame" x="0.0" y="169.33333333333331" width="84.666666666666671" height="84.666666666666686"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="A3" label="A3"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="euz-JI-Kit" userLabel="B2">
                                         <rect key="frame" x="84.666666666666657" y="84.666666666666686" width="84.666666666666657" height="84.666666666666686"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="B2" label="B2"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-F3-F8A" userLabel="B3">
                                         <rect key="frame" x="84.666666666666657" y="169.33333333333331" width="84.666666666666657" height="84.666666666666686"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="B3" label="B3"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fd6-5N-3IW" userLabel="C2">
                                         <rect key="frame" x="169.33333333333331" y="84.666666666666686" width="84.666666666666686" height="84.666666666666686"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="C2" label="C2"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" tag="9" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EB6-7h-lK0" userLabel="C3">
                                         <rect key="frame" x="169.33333333333331" y="169.33333333333331" width="84.666666666666686" height="84.666666666666686"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="C3" label="C3"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCf-4B-RaE">
                                         <rect key="frame" x="84.666666666666657" y="0.0" width="2" height="254"/>
