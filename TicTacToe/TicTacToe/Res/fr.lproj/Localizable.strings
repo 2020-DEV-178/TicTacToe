@@ -2,3 +2,9 @@
 
 "player_one_name"="Joueur 1";
 "player_two_name"="Joueur 2";
+
+"alert.winner.title"="Nous avons un gagnant";
+"alert.winner.message"="Felicitation %@, vous avez gagné";
+
+"alert.draw.title"="Pas cette fois ci";
+"alert.draw.message"="Personne ne gagne cette partie";

@@ -4,15 +4,33 @@ import UIKit
 
 class TicTacToeView: UIView {
         
-    weak private var listener: TicTacToeViewListener?
+    weak var listener: TicTacToeViewListener?
     
     private func onItemClicked(column: Column, row: Row, on imageView: UIImageView) {
         guard let result = listener?.userSelected(column: column, row: row) else { return }
         switch result {
-        case .Authorized(let player): imageView.image = player.image
-        case .Draw, .Win: isUserInteractionEnabled = false
+        case .Authorized(let player):
+            imageView.image = player.image
+        case .Win(let player):
+            imageView.image = player.image
+            isUserInteractionEnabled = false
+        case .Draw:
+            isUserInteractionEnabled = false
         case .Forbiden: break
         }
+    }
+    
+    func clearBoard() {
+        imageA1.image = nil
+        imageA2.image = nil
+        imageA3.image = nil
+        imageB1.image = nil
+        imageB2.image = nil
+        imageB3.image = nil
+        imageC1.image = nil
+        imageC2.image = nil
+        imageC3.image = nil
+        isUserInteractionEnabled = true
     }
     
     @IBOutlet public var imageA1: UIImageView! {
@@ -68,43 +86,35 @@ class TicTacToeView: UIView {
         var column: Column?
         var row: Row?
         switch imageView.tag {
-        case 1: do {
+        case 1:
             column = .A
             row = .One
-        }
-        case 2: do {
+        case 2:
             column = .B
             row = .One
-        }
-        case 3: do {
+        case 3:
             column = .C
             row = .One
-        }
-        case 4: do {
+        case 4:
             column = .A
             row = .Two
-        }
-        case 5: do {
+        case 5:
             column = .B
             row = .Two
-        }
-        case 6: do {
+        case 6:
             column = .C
             row = .Two
-        }
-        case 7: do {
+        case 7:
             column = .A
             row = .Three
-        }
-        case 8: do {
+        case 8:
             column = .B
             row = .Three
-        }
-        case 9: do {
+        case 9:
             column = .C
             row = .Three
-        }
-        default: break
+        default:
+            break
         }
         
         if let column = column, let row = row {

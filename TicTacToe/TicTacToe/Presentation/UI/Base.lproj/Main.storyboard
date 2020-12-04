@@ -192,6 +192,7 @@
                         <outlet property="playerImage" destination="d8G-GW-1aV" id="jwH-EV-rde"/>
                         <outlet property="playerLabel" destination="8mx-LE-jN3" id="kpQ-hY-xOY"/>
                         <outlet property="restartButton" destination="QE2-k8-BIm" id="shK-10-1ic"/>
+                        <outlet property="ticTacToeView" destination="Oje-bz-Iy9" id="Vgi-c0-cwu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

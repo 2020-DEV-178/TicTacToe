@@ -11,7 +11,7 @@ class TicTacToeViewModel {
     private let player1: Player
     private let player2: Player
     
-    private var currentPlayer: Player
+    var currentPlayer: Player
     
     private var moveCounter: Int = 0
     
@@ -22,6 +22,12 @@ class TicTacToeViewModel {
         self.player1 = player1
         self.player2 = player2
         self.currentPlayer = player1
+    }
+    
+    public func startGame() {
+        board.removeAll()
+        moveCounter = 0
+        currentPlayer = player1
     }
     
     public func moveMade(at location: Location) -> MoveResult {

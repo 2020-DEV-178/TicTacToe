@@ -2,3 +2,9 @@
 
 "player_one_name"="Speler 1";
 "player_two_name"="Speler 2";
+
+"alert.winner.title"="Een winnaar is hier";
+"alert.winner.message"="Gefeliciteerd% @, jij wint!";
+
+"alert.draw.title"="Deze keer niet";
+"alert.draw.message"="Het lijkt erop dat niemand heeft gewonnen!";
