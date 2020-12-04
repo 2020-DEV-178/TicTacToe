@@ -16,7 +16,7 @@ class TicTacToeViewModel {
     private var moveCounter: Int = 0
     
     private var board = Board()
-    private lazy var winnerValidator = TicTacToeWinnerValidator(board)
+    private lazy var winnerValidator = TicTacToeWinnerValidator(board: board)
     
     init(player1: Player, player2: Player) {
         self.player1 = player1
