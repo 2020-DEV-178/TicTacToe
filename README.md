@@ -10,12 +10,17 @@
 Open the **.xcodeproj** file using Xcode and click on the **run** icon.
 No need of any dependency or other tools.
 
-You can run the unit test by selecting **Tests** as target.
-
 > Enjoy the game
 
 
+### How to test
 
+This project contains two type of test :
+- Unit Test
+All the "game logic" can be tested by running the Unit Test part, go to the Testing panel, and click on the run logo for Unit Test
+
+- UI Test;
+All the movements can be tested by running the UI Test part. go to the Testing panel, and click on the run logo for UI Test
 
 
 ###### Extra information
