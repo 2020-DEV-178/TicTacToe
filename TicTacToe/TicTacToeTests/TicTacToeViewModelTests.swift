@@ -79,9 +79,9 @@ class TicTacToeViewModelTests: XCTestCase {
         let viewModel = TicTacToeViewModel(player1: player1, player2: player2)
         _ = viewModel.moveMade(at: Location(column: .A, row: .One))
         _ = viewModel.moveMade(at: Location(column: .B, row: .Three))
-        _ = viewModel.moveMade(at: Location(column: .A, row: .Two))
-        _ = viewModel.moveMade(at: Location(column: .C, row: .One))
-        let moveResult = viewModel.moveMade(at: Location(column: .A, row: .Three))
+        _ = viewModel.moveMade(at: Location(column: .B, row: .One))
+        _ = viewModel.moveMade(at: Location(column: .A, row: .Three))
+        let moveResult = viewModel.moveMade(at: Location(column: .C, row: .One))
         guard case let .Win(player) = moveResult else {
             XCTFail("The game should be won by player 1 - A1 - A2 -A3" )
             exit(-1)

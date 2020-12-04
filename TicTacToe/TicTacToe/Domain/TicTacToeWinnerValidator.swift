@@ -2,13 +2,7 @@ import Foundation
 
 class TicTacToeWinnerValidator{
     
-    let board: [Location: Player?]
-    
-    init(board: [Location: Player?]) {
-        self.board = board
-    }
-    
-    func verifyIfPlayerHasWon(from location: Location) -> Bool {
+    func verifyIfPlayerHasWon(from location: Location, in board: [Location: Player?]) -> Bool {
         guard let player = board[location] else { return false }
         return createLocations(from: location)
             .map { $0.values.map { board[$0] == player } }

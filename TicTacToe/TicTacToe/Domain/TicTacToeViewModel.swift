@@ -16,7 +16,7 @@ class TicTacToeViewModel {
     private var moveCounter: Int = 0
     
     private var board = Board()
-    private lazy var winnerValidator = TicTacToeWinnerValidator(board: board)
+    private lazy var winnerValidator = TicTacToeWinnerValidator()
     
     init(player1: Player, player2: Player) {
         self.player1 = player1
@@ -31,7 +31,7 @@ class TicTacToeViewModel {
         }
         board[location] = currentPlayer
         moveCounter += 1
-        if winnerValidator.verifyIfPlayerHasWon(from: location) {
+        if winnerValidator.verifyIfPlayerHasWon(from: location, in: board) {
             return .Win(player: player)
         } else if moveCounter == MagicNumbers.maxMoveNumber {
             return .Draw
