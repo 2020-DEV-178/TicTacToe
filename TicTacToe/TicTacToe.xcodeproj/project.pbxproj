@@ -12,8 +12,8 @@
 		DD2D8542257A5CDD00C61F24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2D8540257A5CDD00C61F24 /* Main.storyboard */; };
 		DD2D8544257A5CDE00C61F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2D8543257A5CDE00C61F24 /* Assets.xcassets */; };
 		DD2D8547257A5CDE00C61F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2D8545257A5CDE00C61F24 /* LaunchScreen.storyboard */; };
-		DD2D8552257A5CDE00C61F24 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D8551257A5CDE00C61F24 /* TicTacToeTests.swift */; };
 		DD2D855D257A5CDE00C61F24 /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D855C257A5CDE00C61F24 /* TicTacToeUITests.swift */; };
+		DD2D857A257A5E3600C61F24 /* TicTacToeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D8579257A5E3600C61F24 /* TicTacToeViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,11 @@
 		DD2D8546257A5CDE00C61F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD2D8548257A5CDE00C61F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2D854D257A5CDE00C61F24 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD2D8551257A5CDE00C61F24 /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
 		DD2D8553257A5CDE00C61F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2D8558257A5CDE00C61F24 /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2D855C257A5CDE00C61F24 /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		DD2D855E257A5CDE00C61F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD2D8579257A5E3600C61F24 /* TicTacToeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +109,8 @@
 		DD2D8550257A5CDE00C61F24 /* TicTacToeTests */ = {
 			isa = PBXGroup;
 			children = (
-				DD2D8551257A5CDE00C61F24 /* TicTacToeTests.swift */,
 				DD2D8553257A5CDE00C61F24 /* Info.plist */,
+				DD2D8579257A5E3600C61F24 /* TicTacToeViewModelTests.swift */,
 			);
 			path = TicTacToeTests;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD2D8552257A5CDE00C61F24 /* TicTacToeTests.swift in Sources */,
+				DD2D857A257A5E3600C61F24 /* TicTacToeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
